@@ -8,6 +8,7 @@
   --clr-accent-100: hsl(13, 100%, 96%);
   /* neutral color */
   --clr-neutral-900: hsl(232, 12%, 13%);
+  --clr-neutral-200: hsl(0, 0%, 97%);
   --clr-neutral-100: hsl(0, 0%, 100%);
   /* font primary */
   --ff-primary: 'Be Vietnam Pro', sans-serif;
@@ -230,6 +231,7 @@ p[data-width='wide'] {
     background-color: var(--clr-neutral-100);
     border-radius: var(--size-100);
     box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.125);
+    z-index: 99;
   }
   /* add data-overlay attribute when toggle clicked */
   .primary-header[data-overlay]::before {
@@ -257,6 +259,7 @@ p[data-width='wide'] {
     background: transparent;
     border: 0;
     padding: 0.5em;
+    z-index: 99;
   }
   .mobile-nav-toggle .icon-close {
     display: none;
@@ -464,6 +467,103 @@ input:where([type='email'], [type='text']) {
 
 /* UTILITY CLASSES */
 
+/* slider */
+
+.slider {
+  display: flex;
+  gap: var(--size-600);
+  list-style: none;
+}
+
+.a11y-slider-container {
+  margin-block: var(--size-700);
+  margin-inline: var(--size-400);
+}
+
+.slider > * {
+  position: relative;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+@media (min-width: 30em) {
+  .slider {
+    scroll-padding-inline: 25px;
+  }
+
+  .a11y-slider-container {
+    margin-inline: 0;
+  }
+
+  .slider > * {
+    width: 50%;
+  }
+}
+
+@media (min-width: 50em) {
+  .slider > * {
+    width: 45%;
+  }
+}
+
+.slider-content {
+  padding: var(--size-900) var(--size-600);
+  border-radius: var(--size-100);
+  background-color: var(--clr-neutral-200);
+}
+
+.slider img {
+  width: var(--size-800);
+  position: relative;
+  top: calc(var(--size-800) / 2);
+  margin-inline: auto;
+}
+
+.a11y-slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--size-300);
+  margin-block: var(--size-500);
+}
+
+.a11y-slider-dots li {
+  display: block;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  color: #fff;
+}
+
+.a11y-slider-dots li button {
+  display: block;
+  font-size: 0;
+  text-indent: -999px;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 1px solid var(--clr-accent-400);
+  border-radius: 100%;
+}
+
+.a11y-slider-dots li button.active {
+  background-color: var(--clr-accent-400);
+}
+
+/* .a11y-slider-prev {
+  text-indent: -999px;
+  position: relative;
+}
+
+.a11y-slider-prev::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 0;
+  top: 0;
+} */
+
 /* hide element for screen reader only */
 
 .visually-hidden {
@@ -549,6 +649,9 @@ input:where([type='email'], [type='text']) {
   color: var(--clr-accent-100);
 }
 
+.text-neutral-200 {
+  color: var(--clr-neutral-100);
+}
 .text-neutral-100 {
   color: var(--clr-neutral-100);
 }

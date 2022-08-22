@@ -12,6 +12,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
   <!-- CSS Link -->
   <link rel="stylesheet" href="style.css">
+  <!-- A11Y Slider CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.css" />
+  <!-- A11Y Slider JS -->
+  <script src="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.js"></script>
 </head>
 
 <body>
@@ -103,9 +107,38 @@
       </div>
     </section>
 
-    <section class="carousel | padding-block-700">
+    <section class="carousel | padding-block-700 text-center">
       <h2 class="fs-secondary-heading fw-bold">What they've said</h2>
-      <!-- Carousel here -->
+      <ul class="slider">
+        <li>
+          <img src="images/avatar-anisha.png" alt="avatar image">
+          <div class="slider-content | flow" style="--flow-spacer: 1rem">
+            <h3 class="fw-bold">Anisha Li</h3>
+            <p data-width="wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sit id temporibus ipsam incidunt ad debitis excepturi cupiditate repudiandae voluptate cum quo, magni, labore voluptatem?</p>
+          </div>
+        </li>
+        <li>
+          <img src="images/avatar-ali.png" alt="avatar image">
+          <div class="slider-content | flow" style="--flow-spacer: 1rem">
+            <h3 class="fw-bold">Ali Bravo</h3>
+            <p data-width="wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sit id temporibus ipsam incidunt ad debitis excepturi cupiditate repudiandae voluptate cum quo, magni, labore voluptatem?</p>
+          </div>
+        </li>
+        <li>
+          <img src="images/avatar-richard.png" alt="avatar image">
+          <div class="slider-content | flow" style="--flow-spacer: 1rem">
+            <h3 class="fw-bold">Richard Watts</h3>
+            <p data-width="wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sit id temporibus ipsam incidunt ad debitis excepturi cupiditate repudiandae voluptate cum quo, magni, labore voluptatem?</p>
+          </div>
+        </li>
+        <li>
+          <img src="images/avatar-shanai.png" alt="avatar image">
+          <div class="slider-content | flow" style="--flow-spacer: 1rem">
+            <h3 class="fw-bold">Shanai boy</h3>
+            <p data-width="wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sit id temporibus ipsam incidunt ad debitis excepturi cupiditate repudiandae voluptate cum quo, magni, labore voluptatem?</p>
+          </div>
+        </li>
+      </ul>
       <button class="button">Get Started</button>
     </section>
 
